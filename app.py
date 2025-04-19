@@ -5,6 +5,19 @@ from grammar_scorer import score_grammar
 from whisper_transcriber import transcribe_whisper
 import warnings
 
+import subprocess
+try:
+    result = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True)
+    if result.returncode == 0:
+        st.success("✅ FFmpeg is available!")
+        st.text(result.stdout.split('\n')[0])  # Show just the version
+    else:
+        st.error("❌ FFmpeg not working properly.")
+        st.text(result.stderr)
+except Exception as e:
+    st.error("⚠️ Error when checking FFmpeg:")
+    st.text(str(e))
+
 warnings.filterwarnings("ignore", category=FutureWarning)  # For Hugging Face
 warnings.filterwarnings("ignore", message="FP16 is not supported")  # For Whisper
 
