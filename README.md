@@ -1,4 +1,3 @@
-```markdown
 # Grammar Scoring Engine
 
 ## Overview
