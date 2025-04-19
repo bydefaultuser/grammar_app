@@ -1,3 +1,4 @@
+```markdown
 # Grammar Scoring Engine
 
 ## Overview
@@ -55,20 +56,24 @@ This project requires **FFmpeg** to process audio files. Below are the steps for
    ```
 
 ### Installation Video
-For a detailed guide on how to install FFmpeg on your system, watch this YouTube video: [How to Install FFmpeg](https://www.youtube.com/watch?v=4jx2_j5Seew)
+For a detailed guide on how to install FFmpeg on your system, watch this [YouTube video](https://www.youtube.com/watch?v=4jx2_j5Seew).
 
 ---
 
 ## Installation
 
 ### Clone the Repository
+
 Clone the repository to your local machine using Git:
+
 ```bash
 git clone https://github.com/your-username/grammar-scoring-engine.git
 ```
 
 ### Install Dependencies
+
 Navigate to the project folder and install the required Python dependencies:
+
 ```bash
 cd grammar-scoring-engine
 pip install -r requirements.txt
@@ -79,6 +84,7 @@ pip install -r requirements.txt
 ## Running the Application
 
 Once all dependencies are installed, run the app using the following command:
+
 ```bash
 streamlit run app.py
 ```
@@ -87,43 +93,41 @@ streamlit run app.py
 
 ## How It Works
 
-- **Audio File Upload:** Upload an audio file in MP3, WAV, OGG, or M4A format using the app interface.
-- **Audio Transcription:** The app uses Whisper to transcribe the uploaded audio into text.
-- **Grammar Scoring:** The transcript is analyzed for grammar, and a score (out of 10) is generated using the Transformers library.
-- **Corrections:** The app shows a corrected version of the transcript with highlighted grammar errors.
-- **Improvement Tips:** If the grammar score is below 8, the app will suggest tips for improving grammar, such as subject-verb agreement, verb tense checks, and article usage.
+1. **Audio File Upload**: Upload an audio file in MP3, WAV, OGG, or M4A format using the app interface.
+2. **Audio Transcription**: The app uses **Whisper** to transcribe the uploaded audio into text.
+3. **Grammar Scoring**: The transcript is analyzed for grammar, and a score (out of 10) is generated using the **Transformers** library.
+4. **Corrections**: The app shows a corrected version of the transcript with highlighted grammar errors.
+5. **Improvement Tips**: If the grammar score is below 8, the app will suggest tips for improving grammar, such as subject-verb agreement, verb tense checks, and article usage.
 
 ---
 
 ## Troubleshooting
 
-- If FFmpeg is not working correctly, make sure it is installed properly and added to the system PATH (for Windows).
+- If FFmpeg is not working correctly, make sure it is installed properly and added to the system **PATH** (for Windows).
 - If you encounter issues with audio transcription or grammar scoring, ensure that the dependencies are correctly installed using the `pip install -r requirements.txt` command.
 
 ---
 
 ## Additional Information
 
-For more details on Whisper, Transformers, or Streamlit, you can refer to the following official documentation:
+For more details on **Whisper**, **Transformers**, or **Streamlit**, you can refer to the following official documentation:
 
-- [Whisper Documentation](https://openai.com/research/whisper)
-- [Transformers Documentation](https://huggingface.co/docs/transformers)
-- [Streamlit Documentation](https://streamlit.io/docs)
+- [Whisper](https://openai.com/research/whisper)
+- [Transformers](https://huggingface.co/)
+- [Streamlit](https://streamlit.io/)
 
 ---
 
 ## Built With
 
-- **Whisper** for transcription
-- **Transformers** for grammar analysis
-- **Streamlit** for the web app interface
+- [Whisper](https://openai.com/research/whisper) for transcription
+- [Transformers](https://huggingface.co/) for grammar analysis
+- [Streamlit](https://streamlit.io/) for the web app interface
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
----
 
