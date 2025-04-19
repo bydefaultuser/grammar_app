@@ -1,6 +1,3 @@
-Here is the corrected version of your `README.md` file, without the "bash edit copy" and properly formatted for a more professional look:
-
-```markdown
 # Grammar Scoring Engine
 
 ## Overview
