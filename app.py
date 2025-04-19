@@ -6,6 +6,17 @@ from whisper_transcriber import transcribe_whisper
 import warnings
 
 import subprocess
+
+
+warnings.filterwarnings("ignore", category=FutureWarning)  # For Hugging Face
+warnings.filterwarnings("ignore", message="FP16 is not supported")  # For Whisper
+
+# Configure Streamlit
+st.set_page_config(
+    page_title="Grammar Scoring Engine",
+    page_icon="✍️",
+    layout="wide"
+)
 try:
     result = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True)
     if result.returncode == 0:
@@ -17,17 +28,6 @@ try:
 except Exception as e:
     st.error("⚠️ Error when checking FFmpeg:")
     st.text(str(e))
-
-warnings.filterwarnings("ignore", category=FutureWarning)  # For Hugging Face
-warnings.filterwarnings("ignore", message="FP16 is not supported")  # For Whisper
-
-# Configure Streamlit
-st.set_page_config(
-    page_title="Grammar Scoring Engine",
-    page_icon="✍️",
-    layout="wide"
-)
-
 # Custom CSS for better visuals
 st.markdown("""
 <style>
